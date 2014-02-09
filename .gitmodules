@@ -10,7 +10,7 @@
 
 # Langs
 [submodule "langs/docker"]
-	path = tools/docker
+	path = langs/docker
 	url = https://github.com/honza/dockerfile.vim.git
 [submodule "langs/javascript"]
 	path = langs/javascript
@@ -146,6 +146,3 @@
 [submodule "tools/nerdtree-tabs"]
 	path = tools/nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
-[submodule "tools/docker"]
-	path = tools/docker
-	url = https://github.com/honza/dockerfile.vim.git
