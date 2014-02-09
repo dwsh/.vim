@@ -146,3 +146,9 @@
 [submodule "tools/nerdtree-tabs"]
 	path = tools/nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "tools/airline"]
+	path = tools/airline
+	url = https://github.com/bling/vim-airline.git
+[submodule "tools/gitgutter"]
+	path = tools/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git

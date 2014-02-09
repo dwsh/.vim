@@ -15,7 +15,7 @@ set guioptions-=R
 set guioptions-=m
 set guioptions-=e
 
-set guifont=Source\ Code\ Pro\ 9
+set guifont=Ubuntu\ Mono\ 9
 
 set linespace=0
 
