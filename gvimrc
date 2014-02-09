@@ -15,14 +15,12 @@ set guioptions-=R
 set guioptions-=m
 set guioptions-=e
 
-set guifont=Ubuntu\ Mono\ 9
+set guifont=Source\ Code\ Pro\ 9
 
 set linespace=0
 
-colorscheme default
-"colorscheme defaultplus
-"colorscheme solarized
-"set background=dark
+colorscheme solarized
+set background=dark
 
 hi User1 ctermbg=red ctermfg=white cterm=bold term=bold guibg=#aa0000 guifg=#ffffff gui=none
 

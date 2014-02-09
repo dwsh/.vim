@@ -1,12 +1,12 @@
 runtime tools/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect('tools/{}','langs/{}','colors/{}')
-syntax on
-filetype plugin indent on
+"syntax on
+"filetype plugin indent on
 
 
 
 
-color desert
+color solarized
 map <Leader><Leader> :ZoomWin<CR>
 map <c-t> :CtrlP pwd<CR>
 nmap <Leader>n :tabnew<CR>
@@ -92,6 +92,7 @@ au BufNewFile,BufRead *.ejs set filetype=html
 
 
 "" Whitespace
+set number
 set nowrap                          " don't wrap lines
 set tabstop=4
 set shiftwidth=4          " a tab is two spaces (or set this to 4)
