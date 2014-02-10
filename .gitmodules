@@ -155,3 +155,6 @@
 [submodule "colors/ir_black"]
 	path = colors/ir_black
 	url = https://github.com/twerth/ir_black.git
+[submodule "tools/vim-unimpaired"]
+	path = tools/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git

@@ -1,17 +1,112 @@
 runtime tools/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect('tools/{}','langs/{}','colors/{}')
-"syntax on
-"filetype plugin indent on
 
+syntax on
+filetype plugin indent on
+
+set nocompatible
 set shell=/bin/zsh
-
+set number
+set nowrap
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+set backspace=indent,eol,start
 
 color default
+
+let NERDTreeChDirMode=2
+
+au BufRead,BufNewFile *.tpl set ft=phtml
+au BufNewFile,BufRead *.ejs set filetype=html
+
+
+
+
+
+" ========================================
+" List chars
+" ========================================
+set listchars=""                  " Reset the listchars
+set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
+set listchars+=trail:.            " show trailing spaces as dots
+set listchars+=extends:>          " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+set listchars+=precedes:<         " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the left of the screen
+
+
+
+" ========================================
+" Searching
+" ========================================
+set hlsearch    " highlight matches
+set incsearch   " incremental searching
+set ignorecase  " searches are case insensitive...
+set smartcase   " ... unless they contain at least one capital letter
+
+
+
+" ========================================
+" Key Mapping
+" ========================================
+
 map <Leader><Leader> :ZoomWin<CR>
 map <c-t> :CtrlP pwd<CR>
-nmap <Leader>n :tabnew<CR>
 nmap <Leader>q :quit<CR>
+map <F9> :NERDTreeTabsToggle<CR>
 
+" tab management
+nmap <Leader>n :tabnew<CR>
+map <C-Tab> gt
+map <C-S-Tab> gT
+map <F8> :TagbarToggle<CR>
+
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+nmap <C-k> [e
+nmap <C-j> ]e
+
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+vmap <C-k> [egv
+vmap <C-j> ]egv
+
+" upper/lower word
+nmap <leader>u mQviwU`Q
+nmap <leader>l mQviwu`Q
+
+" upper/lower first char of word
+nmap <leader>U mQgewvU`Q
+nmap <leader>L mQgewvu`Q
+
+
+
+
+" ========================================
+" Airline Configuration
+" ========================================
+
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▸'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◂'
+let g:airline_theme='kalisi'
+set laststatus=2
+
+
+
+
+
+
+
+
+
+" ========================================
+" Tabline Configuration
+" ========================================
 
 function MyTabLine()
   let s = ''
@@ -75,54 +170,3 @@ endfunction
 
 set tabline=%!MyTabLine()
 
-
-
-map <F9> :NERDTreeTabsToggle<CR>
-let NERDTreeChDirMode=2
-
-
-" tab management
-map <C-Tab> gt
-map <C-S-Tab> gT
-
-
-
-au BufRead,BufNewFile *.tpl set ft=phtml
-au BufNewFile,BufRead *.ejs set filetype=html
-
-
-"" Whitespace
-set number
-set nowrap                          " don't wrap lines
-set tabstop=4
-set shiftwidth=4          " a tab is two spaces (or set this to 4)
-"set softtabstop=4
-set noexpandtab                 " use spaces, not tabs (optional)
-set backspace=indent,eol,start      " backspace through everything in insert mode
-
-
-"nmap <F8> :TagbarToggle<CR>         " mapping f8 to TagbarToggle
-
-set textwidth=80
-
-"" Put autocmd here
-
-
-"control p config
-"let g:ctrlp_working_path_mode = '1'
-let g:ctrlp_cmd = 'CtrlP pwd'
-
-
-"Airline
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▸'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◂'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
