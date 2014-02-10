@@ -152,3 +152,6 @@
 [submodule "tools/gitgutter"]
 	path = tools/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "colors/ir_black"]
+	path = colors/ir_black
+	url = https://github.com/twerth/ir_black.git

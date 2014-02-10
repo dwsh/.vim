@@ -3,10 +3,10 @@ execute pathogen#infect('tools/{}','langs/{}','colors/{}')
 "syntax on
 "filetype plugin indent on
 
+set shell=/bin/zsh
 
 
-
-color solarized
+color default
 map <Leader><Leader> :ZoomWin<CR>
 map <c-t> :CtrlP pwd<CR>
 nmap <Leader>n :tabnew<CR>
@@ -111,3 +111,18 @@ set textwidth=80
 "control p config
 "let g:ctrlp_working_path_mode = '1'
 let g:ctrlp_cmd = 'CtrlP pwd'
+
+
+"Airline
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▸'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◂'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
