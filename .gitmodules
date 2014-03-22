@@ -161,3 +161,6 @@
 [submodule "langs/coffe-script"]
 	path = langs/coffe-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "tools/editorconfig"]
+	path = tools/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git
