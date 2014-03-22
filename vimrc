@@ -12,6 +12,7 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 set backspace=indent,eol,start
+set showtabline=2
 
 color default
 
@@ -170,3 +171,6 @@ endfunction
 
 set tabline=%!MyTabLine()
 
+
+" Remove Trailing Spaces
+command RTS :%s/\s\+$//
