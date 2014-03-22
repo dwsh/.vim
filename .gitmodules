@@ -158,3 +158,6 @@
 [submodule "tools/vim-unimpaired"]
 	path = tools/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "langs/coffe-script"]
+	path = langs/coffe-script
+	url = https://github.com/kchmck/vim-coffee-script.git
