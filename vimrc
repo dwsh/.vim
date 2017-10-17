@@ -16,7 +16,7 @@ set showtabline=2
 
 color default
 
-"let NERDTreeChDirMode=2
+let NERDTreeChDirMode=2
 
 au BufRead,BufNewFile *.tpl set ft=phtml
 au BufNewFile,BufRead *.ejs set filetype=html
@@ -92,3 +92,4 @@ command RTS :%s/\s\+$//
 
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
+let g:jsx_ext_required = 0

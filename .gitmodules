@@ -164,3 +164,6 @@
 [submodule "tools/editorconfig"]
 	path = tools/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "langs/vim-jsx"]
+	path = langs/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
